@@ -6,6 +6,7 @@
 * [Experiment 3: Bloom Filter Implementation](/docs/bloom.md)
 * [Experiment 4: MapReduce Word Count](/docs/wordcount.md)
 * [Experiment 5: MongoDB Setup and Operations](/docs/mongo.md)
+* [Experiment 6: Apache Pig Installation and Queries](/docs/pig.md)
 * [Experiment 7 & 8: R programming](/docs/r_experiments.md)
 ### 👆Click on the experiment to find the Setup instructions for the script
 
