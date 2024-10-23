@@ -10,9 +10,6 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-# Log file
-LOG_FILE="sqoop_setup_$(date +%Y%m%d_%H%M%S).log"
-
 # Default ports for Hadoop 3.x
 MYSQL_PORT=3306
 NAMENODE_PORT=9870  # Changed from 50070 to 9870 for Hadoop 3.x
@@ -140,7 +137,7 @@ log_message() {
     local message="$1"
     local level="$2"
     local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
-    echo -e "${timestamp} [${level}] ${message}" | tee -a "$LOG_FILE"
+    echo -e "${timestamp} [${level}] ${message}"
 }
 
 # Function to check if command exists
@@ -392,7 +389,6 @@ main() {
     verify_results
     
     log_message "Experiment completed successfully!" "INFO"
-    log_message "Results have been logged to $LOG_FILE" "INFO"
     
     # Display useful URLs with verified ports
     echo -e "\n${GREEN}Access Points:${NC}"
